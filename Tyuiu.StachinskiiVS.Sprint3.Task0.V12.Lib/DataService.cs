@@ -6,14 +6,17 @@ namespace Tyuiu.StachinskiiVS.Sprint3.Task0.V12.Lib
     {
         public double GetMultiplySeries(int value, int startValue, int stopValue)
         {
-            double pro = 1;
-            int i;
+            double MulSeries0 = 0;
+            double MulSeries1 = 1.0;
+            double i;
             for (i = startValue; i <= stopValue; i++)
             {
-                pro = pro * (Math.Pow(value, i) + (1 / (i + 1.0)));
+                MulSeries0 = (Math.Pow(value, i)) + ((1 / (i + 1)));
+                MulSeries1 *= MulSeries0;
+
 
             }
-            return pro;
+            return Math.Round(MulSeries1, 3);
         }
     }
 }
