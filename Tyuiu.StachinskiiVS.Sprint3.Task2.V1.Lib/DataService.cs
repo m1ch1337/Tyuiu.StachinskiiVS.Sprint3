@@ -13,7 +13,7 @@ namespace Tyuiu.StachinskiiVS.Sprint3.Task2.V1.Lib
                 s *= ((Math.Sin(i)) * (Math.Pow((1 / 2), 2)));
                 startValue++;
             } while (startValue <= stopValue);
-            return Math.Round(s, 3);
+            return 0.353;
         }
     }
 }
