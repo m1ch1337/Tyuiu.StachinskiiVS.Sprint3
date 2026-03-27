@@ -6,19 +6,14 @@ namespace Tyuiu.StachinskiiVS.Sprint3.Task3.V4.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidDeleteCharInString()
         {
             DataService ds = new DataService();
-            int[,] array = new int[5, 5] { { 6, 5, 4, 1, 5 },
-                                           { 8, 2, 3, 4, 2 },
-                                           { 3, 7, 7, 1, 3 },
-                                           { 3, 4, 8, 1, 3 },
-                                           { 4, 3, 5, 5, 2 } };
-            int res = ds.Calculate(array);
-            int wait = 2;
+            string str = "plkjjdw cvjkl";
+            char letter = 'j';
+            string res = ds.DeleteCharInString(str, letter);
+            string wait = "plkdw cvkl";
             Assert.AreEqual(wait, res);
-
-
         }
     }
 }

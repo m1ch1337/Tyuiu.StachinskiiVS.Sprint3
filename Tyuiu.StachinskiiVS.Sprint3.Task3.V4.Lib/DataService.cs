@@ -1,26 +1,22 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint4;
+﻿using tyuiu.cources.programming.interfaces.Sprint3;
+using tyuiu.cources.programming.interfaces.Sprint4;
 
 namespace Tyuiu.StachinskiiVS.Sprint3.Task3.V4.Lib
 {
-    public class DataService : ISprint4Task3V4
+    public class DataService : ISprint3Task3V4
     {
-        public int Calculate(int[,] array)
+        public string DeleteCharInString(string value, char item)
         {
-            int h = 0;
-            for (int i = 0; i < array.GetLength(0); i++)
+            string result = "";
+            foreach (char letter in value)
             {
-                for (int j = 0; j < array.GetLength(1); j++)
+                if (letter != 'j')
                 {
-                    if (array[i, j] == 2)
-                    {
-                        h = array[i, j];
-
-                    }
-
+                    result += letter;
                 }
             }
-            return h;
 
+            return result;
         }
     }
 }

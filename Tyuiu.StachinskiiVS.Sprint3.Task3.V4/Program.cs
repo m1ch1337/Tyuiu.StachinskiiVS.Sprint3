@@ -1,40 +1,25 @@
-﻿int[,] array = new int[5, 5] { { 6, 5, 4, 1, 5 },
-                                           { 8, 2, 3, 4, 2 },
-                                           { 3, 7, 7, 1, 3 },
-                                           { 3, 4, 8, 1, 3 },
-                                           { 4, 3, 5, 5, 2 } };
-Console.Title = "Спринт #4 | Выполнил: Стачинский В. С. | ИСПб-24-1";
+﻿using Tyuiu.StachinskiiVS.Sprint3.Task3.V4.Lib;
+
+DataService ds = new DataService();
+string str = "plkjjdw cvjkl";
+char letter = 'j';
+Console.Title = "Спринт #2 | Выполнил: Стачинский В.С. | ИСПб-24-1";
 Console.WriteLine("***************************************************************************");
-Console.WriteLine("* Спринт #4                                                               *");
-Console.WriteLine("* Тема: Одномерные массивы (генератор случайных чисел)                    *");
+Console.WriteLine("* Спринт #3                                                               *");
+Console.WriteLine("* Тема: Оператор цикла foreach                                            *");
 Console.WriteLine("* Задание #3                                                              *");
 Console.WriteLine("* Вариант #4                                                              *");
-Console.WriteLine("* Выполнил: Стачинский В. С. | ИСПб-24-1                                  *");
+Console.WriteLine("* Выполнил: Стачинский В.С. | ИСПб-24-1                                   *");
 Console.WriteLine("***************************************************************************");
 Console.WriteLine("* УСЛОВИЕ:                                                                *");
-Console.WriteLine("* Дан двумерный целочисленный массив 5 на 5 элементов, заполненный        *");
-Console.WriteLine("* статическими значениями в диапазоне от 1 до 8. Найдите минимальный      *");
-Console.WriteLine("* элемент в последнем столбце массива.                                    *");
+Console.WriteLine("* Используя цикл foreach удалить из строки все буквы j в строке           *");
 Console.WriteLine("***************************************************************************");
 Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 Console.WriteLine("***************************************************************************");
-
-int h = 0;
-for (int i = 0; i < array.GetLength(0); i++)
-{
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-        if (array[i, j] == 2)
-        {
-            h = array[i, j];
-        }
-    }
-}
-
-
-
+Console.WriteLine($" Искомая строка: {str}");
+Console.WriteLine($" Искомая буква, которую нужно удалить: {letter}");
 Console.WriteLine("***************************************************************************");
 Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
 Console.WriteLine("***************************************************************************");
-
-Console.WriteLine("Минимальный элемент в последнем столбце: " + h);
+Console.WriteLine($" Строка в итоге: {ds.DeleteCharInString(str, letter)}");
+Console.ReadKey();
